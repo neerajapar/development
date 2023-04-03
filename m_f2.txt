@@ -1,0 +1,62 @@
+NEXUS commands:
+    1 useradd -m -s /bin/bash super30
+    2  sudo su - super30
+    3  chown ubuntu.root /home/super30/abc
+    4  ls -ltr
+    5  ls -ltr /home/super30/abc
+    6  sudo su - super30
+    7  chown -R  nexus.ubuntu /home/super30/*
+    8  ls -ltr
+    9  ls -ltr /home/super30/
+   10  clear
+   11  ls -ltr /home/super30/
+   12  clear
+   13  cd /opt
+   14  ls -ltr
+   15  chown -R nexus.nexus nexus
+   16  chown -R nexus sonatype-work
+   17  cd nexus/
+   18  cd bin/
+   19  ls -ltr
+   20  vi nexus.rc
+   21  ./nexus start
+   22  apt install openjdk-8-* -y
+   23  vi /etc//profile
+   24  which java
+   25  ls -ltr /usr/bin/java
+   26  ls -ltr /etc/alternatives/java
+   27  vi /etc/profile
+   28  source /etc/environment
+   29  exit
+   30  alias c=clear
+   31  c
+   32  cd /opt
+   33  wget https://download.sonatype.com/nexus/3/nexus-3.38.1-01-unix.tar.gz
+   34  tar -zxvf nexus-3.38.1-01-unix.tar.gz
+   35  ls -ltr
+   36  mv nexus-3.38.1-01 nexus
+   37  useradd –m –s /bin/bash nexus
+   38  cat /etc/os-rel*
+   39  useradd –m –s /bin/bash nexus
+   40  useradd -m -s /bin/bash nexus
+   41  vi /etc/sudoers
+   42  echo $JAVA_HOME
+   43  echo $PATH
+   44  cd /opt
+   45  cd nexus/bin/
+   46  ls -ltr
+   47  ./nexus start
+   48  netstat -tulpn
+   49  apt install net-tools
+   50  ps -ef|grep -i java
+   51  ps -ef|grep -i nexus
+   52  ls -ltr
+   53  vi nexus.vmoptions
+   54  ls -ltr
+   55  ./nexus start
+   56  netstat -tulpn
+   57  netstat -tulpn|grep 8081
+   58  echo $?
+   59  curl publicip:8081
+   60  curl ifconfig.me
+   61  curl 3.101.142.91:8081
