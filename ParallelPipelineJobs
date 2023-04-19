@@ -1,0 +1,30 @@
+# PARALLEL STAGES:
+pipeline {
+  agent any
+    stages {   
+     stage('Browser Tests') {
+       parallel {
+	     stage('chrome') {
+	       steps {
+		     echo "Chrome Tests"
+		   }
+	     }
+	     stage('Firefox') {
+	       steps {
+	         echo "Firefox Tests"
+	       }
+	     }
+       }
+     stage('find the java version') {
+	   steps {
+	     sh 'java -version'
+	   }
+	 }
+	 stage('syatem uptime information') {
+	   steps {
+	     sh 'uptime'
+	   }
+	 }
+   }
+ }
+}		
