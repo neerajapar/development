@@ -1,0 +1,18 @@
+# variable calling in yaml file concept
+ 
+ ---
+ - hosts: all
+   user: ansible
+   become: yes
+   gather_facts: yes
+   vars:
+     package: nginx
+   tasks:
+   - name: ensure nginx is at the latest version
+     apt:
+	   name: '{{ package }}'
+	   state: latest
+   - name: start nginx
+     service:
+	   name: nginx
+	   state: started
